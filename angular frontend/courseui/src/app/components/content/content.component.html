@@ -1,0 +1,32 @@
+<mat-drawer-container>
+  <mat-drawer [opened]="opened" mode="side">
+    <mat-list>
+
+      <mat-list-item [routerLinkActive]="['active']">
+        <mat-icon color="primary" mat-list-icon inline>directions_car</mat-icon>
+        <a routerLink = "/cars" mat-line>Cars</a>
+      </mat-list-item>
+
+      <mat-list-item [routerLinkActive]="['active']">
+        <mat-icon color="primary" mat-list-icon inline>sell</mat-icon>
+        <a mat-line>Fuel Type</a>
+      </mat-list-item>
+
+      <mat-list-item [routerLinkActive]="['active']">
+        <mat-icon color="primary" mat-list-icon inline>store</mat-icon>
+        <a mat-line>Reservation</a>
+      </mat-list-item>
+
+      <mat-list-item [routerLinkActive]="['active']">
+        <mat-icon color="primary" mat-list-icon inline>spa</mat-icon>
+        <a mat-line>Reports</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+
+<mat-drawer-content>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-content>
+</mat-drawer-container>

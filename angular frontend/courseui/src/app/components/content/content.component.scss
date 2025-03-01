@@ -1,0 +1,29 @@
+.active {
+  background-color: dodgerblue;
+}
+.custom-icon {
+  background-color: midnightblue;  // Use your desired color
+}
+.mat-drawer {
+  width: 200px;
+  min-width: 200px;
+  padding: 16px;
+}
+mat-drawer-container {
+  position: fixed;
+  height: 89%;
+  min-height: 89%;
+  width: 100%;
+  min-width: 100%;
+  background-color: transparent;
+}
+a {
+  color: cadetblue;
+  text-decoration: none;
+}
+a:hover {
+  font-weight: bold;
+}
+.active a {
+  font-weight: bold;
+}
