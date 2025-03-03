@@ -4,6 +4,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {ContentComponent} from './components/content/content.component';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import {ContentComponent} from './components/content/content.component';
     MatSlideToggleModule,
     MatButtonModule,
     MatSidenavModule,
-    ContentComponent
+    ContentComponent,
+    RouterOutlet
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

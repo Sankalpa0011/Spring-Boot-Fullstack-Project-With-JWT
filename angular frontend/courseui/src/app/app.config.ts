@@ -7,6 +7,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {HTTP_INTERCEPTORS, provideHttpClient, withFetch} from '@angular/common/http';
 import {AuthInterceptor} from './components/auth/auth.interceptor';
 import {AuthGuard} from './components/auth/auth.guard';
+import {provideAnimations} from '@angular/platform-browser/animations';
+import { provideToastr } from 'ngx-toastr';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -21,6 +23,8 @@ export const appConfig: ApplicationConfig = {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
-    }
+    },
+    provideAnimations(), // required animations providers
+    provideToastr(),
   ]
 };

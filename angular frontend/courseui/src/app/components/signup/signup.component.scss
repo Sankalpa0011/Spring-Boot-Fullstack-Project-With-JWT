@@ -1,0 +1,66 @@
+.left-side {
+  //border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-side {
+  //border: 1px solid red;
+}
+.register-content {
+  height: 100vh;
+}
+.register-form {
+  text-align: center;
+  padding-top: 100px;
+
+  h3 {
+    font-weight: bold;
+    color: #6ccc52;
+    font-family: "Arial Rounded MT Bold";
+  }
+  p {
+    margin: {
+      top: 8px;
+      bottom: 0;
+    };
+    a {
+      display: inline-block;
+    }
+  }
+  form {
+    margin-top: 30px;
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-control {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    button {
+      background-color: #6ccc52;
+      color: white;
+      font-weight: bold;
+      padding: 8px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      &:hover, &:focus {
+        background-color: midnightblue;
+      }
+    }
+
+    .connect-with-social {
+
+      span {
+        display: block;
+      }
+      .button {
+        display: block;
+        width: 100%;
+        background-color: transparent;
+      }
+      i {
+        transform: translateY(5%);
+      }
+    }
+  }
+}

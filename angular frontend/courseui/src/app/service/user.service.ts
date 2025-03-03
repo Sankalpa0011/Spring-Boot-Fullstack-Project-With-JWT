@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {UserAuthService} from './user-auth.service';
+import {Signup} from '../dto/signup';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +23,10 @@ export class UserService {
 
   public login(loginData:any) {
     return this.httpClient.post(this.BASE_URL + "/authentication", loginData, {headers: this.requestHeader});
+  }
+
+  public registerNewUser(signup: Signup): Observable<Signup> {
+    return this.httpClient.post<Signup>(`${this.BASE_URL}/api/v1/user/register-new-user`, signup, {headers: this.requestHeader});
   }
 
   // @ts-ignore

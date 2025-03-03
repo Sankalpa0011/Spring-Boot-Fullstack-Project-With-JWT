@@ -6,9 +6,11 @@ import {UserComponent} from './components/user/user.component';
 import {LoginComponent} from './components/login/login.component';
 import {ForbiddenComponent} from './components/forbidden/forbidden.component';
 import {AuthGuard} from './components/auth/auth.guard';
+import {SignupComponent} from './components/signup/signup.component';
 
 export const routes: Routes = [
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  // {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path: '', component:SignupComponent},
   {path: 'cars', component:CarComponent},
   {path: 'home', component:HomeComponent},
   {path: 'admin', component:AdminComponent, canActivate:[AuthGuard], data:{roles:['Admin']}},
